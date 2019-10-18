@@ -1,0 +1,144 @@
+<html>
+
+<head>
+
+<!-- HTML5 -->
+<meta charset="utf-8"/>
+<title>Agenda de Contatos</title>
+
+<link href="estilo/stylesheet_danilo.css" type="text/css" rel="stylesheet"/>
+<script src="js/addrow.js"></script>
+
+<style>
+	.corpo{
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.body{
+		font-family: arial;
+		font-size: 30px;
+	}
+	.combobox{
+		width: 230px
+	}
+</style>
+
+</head>
+
+
+<body>
+<br>
+
+<div class="corpo">
+<table align="center" border=0>
+<form onsubmit="return addrow(this)">
+	<tr>
+		<td>
+			Nome:<br>
+			<input type="text" class="text-box" name="nome"/>
+		</td>
+		
+		<td>
+			Sobrenome:<br>
+			<input type="text" class="text-box" name="sobrenome"/>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			Telefone:<br>
+			<input type="text" class="text-box" name="telefone"/>
+		</td>
+		
+		<td>
+			Sexo:<br>
+			<input type="radio" class="text-box" name="sexo" id="sexoM" value="Masculino"/>Masculino
+			<input type="radio" class="text-box" name="sexo" id="sexoF" value="Feminino"/>Feminino
+			<button type="button" class="text-box" onclick="check()" >Masculino</button>
+			<button type="button" class="text-box" onclick="checkk()">Feminino</button>
+		</td>
+		
+		
+		
+	</tr>
+	
+	<tr>
+		<td>
+		Estado:<br>
+		<select class="combobox" name="estado">
+			<option value="Ciudad de México"> Ciudad de México</option>
+			<option value="Morellos">Morellos</option>
+			<option value="Hidalgo">Hidalgo</option>
+			<option value="Puebla">Puebla</option>
+		</select>
+		</td>
+		
+		<td>
+		Bairro:<br>
+		<select class="combobox" name="bairro">
+			<option value="Ciudad de México"> Azcapotzalco</option>
+			<option value="Oaxtepec">Oaxtepec</option>
+			<option value="Floripa">Floripa</option>
+			<option value="Lasvegas">Lasvegas</option>
+		</select>
+		</td>
+		
+		
+		
+	</tr>
+	
+	<tr>
+		<td colspan=2 align="right">
+			<button class="bt_cancel" type="reset">Limpar</button>
+			<button class="bt_normal" type="submit">Cadastrar</button>
+		</td>
+	</tr>
+	
+	
+	
+	
+</form>
+</table>
+<br>
+<hr/>
+
+<br>
+<center>
+	<table class="table_default" >
+		<thead>
+			<th>Nome</th> <th>Telefone</th> <th>Sexo</th> <th>Cidade</th> <th>Bairro</th>
+		<thead>
+		
+		<tbody id="adicionar">
+			<th>Danilo Braz</th> <th>84988825866</th> <th>Masculino</th> <th>CDMX</th> <th>Azcapotzalco</th>
+		</tbody>
+	</table>
+
+</center>
+
+</div>
+
+
+
+
+
+
+<script>
+
+function check(){
+document.getElementById('sexoM').checked = true;
+
+}
+
+function checkk(){
+document.getElementById('sexoF').checked = true;
+}
+
+</script>
+
+</body>
+
+
+</html>
